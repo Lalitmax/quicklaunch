@@ -1,7 +1,6 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/core";
-import "./App.css";
+import "./index.css"; 
 import Toast from "./components/Toast";
 
 function App() {
@@ -29,6 +28,8 @@ function App() {
       <span>|</span>
       <button onClick={() => openApp("firefox")}>Open Firefox</button>
       {showToast && <Toast message={toastMessage} />}
+
+      <div className="text-3xl font-bold text-blue-500">Hello, world!</div>
     </main>
   );
 }
