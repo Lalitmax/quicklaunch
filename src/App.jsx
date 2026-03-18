@@ -23,13 +23,14 @@ function App() {
     }
   };
   return (
-    <main className="container">
-      <button onClick={() => openApp("notepad")}>Open Notepad</button>
-      <span>|</span>
-      <button onClick={() => openApp("firefox")}>Open Firefox</button>
+    <main className="flex justify-center items-center h-screen">
+      <button
+        className="bg-white/90 hover:bg-white text-purple-700 font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
+        onClick={() => openApp("notepad")}
+      >
+        Open Notepad
+      </button>
       {showToast && <Toast message={toastMessage} />}
-
-      <div className="text-3xl font-bold text-blue-500">Hello, world!</div>
     </main>
   );
 }
