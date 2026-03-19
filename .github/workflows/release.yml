@@ -46,6 +46,15 @@ jobs:
 
           # Read the signature file
           $signatureFile = "src-tauri/target/release/bundle/nsis/QuickLaunch_${version}_x64-setup.exe.sig"
+
+          # Check if signature file exists
+          if (-not (Test-Path $signatureFile)) {
+            Write-Error "Signature file not found at: $signatureFile"
+            Write-Host "Contents of bundle/nsis directory:"
+            Get-ChildItem "src-tauri/target/release/bundle/nsis" -Recurse | ForEach-Object { Write-Host $_.FullName }
+            exit 1
+          }
+
           $signature = Get-Content $signatureFile -Raw
 
           $latestJson = @{
