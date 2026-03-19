@@ -1,12 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { invoke } from "@tauri-apps/api/core";
-import "./index.css"; 
+import { getVersion } from "@tauri-apps/api/app";
+import "./index.css";
 import Toast from "./components/Toast";
 import Updater from "./components/Updater";
 
 function App() {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
+  const [version, setVersion] = useState("");
+
+  useEffect(() => {
+    getVersion().then(setVersion);
+  }, []);
 
   // Open app method
   const openApp = async (appName) => {
@@ -40,6 +46,8 @@ function App() {
       }} />
 
       {showToast && <Toast message={toastMessage} />}
+
+      {version && <div className="absolute bottom-4 right-4 text-white/50 text-xs">v{version}</div>}
     </main>
   );
 }
