@@ -1,7 +1,9 @@
-# Tauri + React
+# QuickLaunch
 
-This template should help get you started developing with Tauri and React in Vite.
+A fast, modern launcher to open your favorite apps and websites in one click.
 
-## Recommended IDE Setup
+## Features
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+- Open apps and websites with a single click
+- Add and remove apps and websites from the launcher
+- Cross platform (Windows, macOS, Linux)
