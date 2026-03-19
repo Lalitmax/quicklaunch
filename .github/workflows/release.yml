@@ -29,6 +29,9 @@ jobs:
 
       - name: Build Tauri app
         run: npm run tauri:build
+        env:
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
 
       - name: Get version from tag
         id: get_version
@@ -41,12 +44,17 @@ jobs:
           $version = "${{ steps.get_version.outputs.VERSION }}"
           $date = Get-Date -Format "yyyy-MM-ddTHH:mm:ssZ"
 
+          # Read the signature file
+          $signatureFile = "src-tauri/target/release/bundle/nsis/QuickLaunch_${version}_x64-setup.exe.sig"
+          $signature = Get-Content $signatureFile -Raw
+
           $latestJson = @{
             version = $version
             notes = "QuickLaunch v$version is now available!`n`nFeatures:`n- A fast, modern launcher to open your favorite apps and websites in one click.`n- System tray support`n- Auto-updates enabled`n`nDownload: QuickLaunch_${version}_x64-setup.exe"
             pub_date = $date
             platforms = @{
               "windows-x86_64" = @{
+                signature = $signature.Trim()
                 url = "https://github.com/${{ github.repository }}/releases/download/v${version}/QuickLaunch_${version}_x64-setup.exe"
               }
             }
@@ -59,6 +67,7 @@ jobs:
         with:
           files: |
             src-tauri/target/release/bundle/nsis/QuickLaunch_${{ steps.get_version.outputs.VERSION }}_x64-setup.exe
+            src-tauri/target/release/bundle/nsis/QuickLaunch_${{ steps.get_version.outputs.VERSION }}_x64-setup.exe.sig
             latest.json
           draft: false
           prerelease: false

@@ -22,10 +22,15 @@ function Updater({ onStatusChange }) {
       const update = await check();
 
       if (update) {
+        console.log("Update available:", update.version);
         setUpdateInfo(update);
+      } else {
+        console.log("No updates available - app is up to date");
       }
     } catch (error) {
-      console.error("Update check failed:", error);
+      // Silently handle update check errors to avoid disrupting user experience
+      // Common errors: network issues, missing signature in latest.json, etc.
+      console.warn("Update check failed (this is normal if no release exists):", error.message || error);
     }
   };
 
