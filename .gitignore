@@ -24,6 +24,9 @@ dist-ssr
 *.key
 *.key.pub
 
+# Release files - upload to GitHub releases only
+latest.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
