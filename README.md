@@ -9,7 +9,7 @@ A fast, modern launcher to open your favorite apps and websites in one click.
 - Cross platform (Windows, macOS, Linux)
 
 
-## 🚀 Development
+## Development
 
 ```bash
 # Run in development mode
@@ -19,7 +19,7 @@ npm run tauri:dev
 npm run tauri:build
 ```
 
-## 📦 How to Make a Release
+## How to Make a Release
 
 Releases are automated with GitHub Actions! Just follow these steps:
 
