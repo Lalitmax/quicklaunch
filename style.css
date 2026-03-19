@@ -66,6 +66,14 @@ p {
   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
+.download-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.1rem;
+  margin-left: 0.1rem;
+
+}
+
 .github-link {
   display: inline-block;
   margin-top: 1.5rem;
