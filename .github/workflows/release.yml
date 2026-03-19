@@ -1,0 +1,74 @@
+name: Release App
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Triggers on version tags like v1.0.0, v1.0.1, etc.
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Tauri app
+        run: npm run tauri build
+        env:
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+
+      - name: Get version from tag
+        id: get_version
+        shell: bash
+        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+
+      - name: Create latest.json
+        shell: pwsh
+        run: |
+          $version = "${{ steps.get_version.outputs.VERSION }}"
+          $signature = Get-Content "src-tauri/target/release/bundle/nsis/QuickLaunch_${version}_x64-setup.exe.sig" -Raw
+          $date = Get-Date -Format "yyyy-MM-ddTHH:mm:ssZ"
+
+          $latestJson = @{
+            version = $version
+            notes = "QuickLaunch v$version is now available!`n`nFeatures:`n- A fast, modern launcher to open your favorite apps and websites in one click.`n- System tray support`n- Auto-updates enabled`n`nDownload: QuickLaunch_${version}_x64-setup.exe"
+            pub_date = $date
+            platforms = @{
+              "windows-x86_64" = @{
+                signature = $signature.Trim()
+                url = "https://github.com/${{ github.repository }}/releases/download/v${version}/QuickLaunch_${version}_x64-setup.exe"
+              }
+            }
+          } | ConvertTo-Json -Depth 10
+
+          $latestJson | Out-File -FilePath "latest.json" -Encoding utf8
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            src-tauri/target/release/bundle/nsis/QuickLaunch_${{ steps.get_version.outputs.VERSION }}_x64-setup.exe
+            src-tauri/target/release/bundle/nsis/QuickLaunch_${{ steps.get_version.outputs.VERSION }}_x64-setup.exe.sig
+            latest.json
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

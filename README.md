@@ -9,16 +9,48 @@ A fast, modern launcher to open your favorite apps and websites in one click.
 - Cross platform (Windows, macOS, Linux)
 
 
-# Build and Sign
-## Step 1: Build the app
+## 🚀 Development
+
+```bash
+# Run in development mode
+npm run tauri:dev
+
+# Build the app locally
 npm run tauri:build
+```
 
-## Step 2: Sign the installer
-npm run sign ./src-tauri/target/release/bundle/nsis/QuickLaunch_0.1.0_x64-setup.exe
+## 📦 How to Make a Release
 
-## Step 3: Upload the installer to GitHub
+Releases are automated with GitHub Actions! Just follow these steps:
+
+### Step 1: Update Version
+```bash
+# This updates version in all 3 files automatically
+npm run bump-version 1.0.2
+```
+
+### Step 2: Commit and Push
+```bash
 git add .
-git commit -m "Update"
+git commit -m "chore: bump version to 1.0.2"
 git push
-git tag v0.1.0
-git push origin v0.1.0
+```
+
+### Step 3: Create and Push Tag (This Triggers the Release!)
+```bash
+git tag v1.0.2
+git push origin v1.0.2
+```
+
+**That's it!** GitHub Actions will automatically:
+- Build the app
+- Sign the installer
+- Create `latest.json`
+- Create a GitHub release with all files
+
+**Monitor progress:** https://github.com/Lalitmax/quicklaunch/actions
+
+### Quick One-Liner:
+```bash
+npm run bump-version 1.0.2 && git add . && git commit -m "chore: bump version to 1.0.2" && git push && git tag v1.0.2 && git push origin v1.0.2
+```

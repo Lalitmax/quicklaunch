@@ -7,8 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "tauri": "tauri",
-    "sign": "tauri signer sign --private-key-path .tauri/myapp.key --"
+    "tauri:dev": "tauri",
+    "tauri:build": "tauri build",
+    "sign": "tauri signer sign --private-key-path .tauri/myapp.key --",
+    "bump-version": "pwsh scripts/bump-version.ps1"
   },
   "dependencies": {
     "@tauri-apps/api": "^2",
