@@ -25,7 +25,8 @@ function App() {
   return (
     <main className="flex justify-center items-center h-screen">
       <button
-        className="bg-white/90 hover:bg-white text-purple-700 font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
+        className="bg-white/90 hover:bg-white text-purple-700 font-semibold
+        px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer"
         onClick={() => openApp("notepad")}
       >
         Open Notepad
