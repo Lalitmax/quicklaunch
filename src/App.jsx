@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { invoke } from "@tauri-apps/api/core";
-import { getVersion } from "@tauri-apps/api/app";
 import "./index.css";
 import Toast from "./components/Toast";
 import Updater from "./components/Updater";
@@ -8,11 +7,6 @@ import Updater from "./components/Updater";
 function App() {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
-  const [version, setVersion] = useState("");
-
-  useEffect(() => {
-    getVersion().then(setVersion);
-  }, []);
 
   // Open app method
   const openApp = async (appName) => {
@@ -29,6 +23,7 @@ function App() {
       setTimeout(() => setShowToast(false), 3000);
     }
   };
+
   return (
     <main className="flex justify-center items-center h-screen">
       <button
@@ -39,15 +34,15 @@ function App() {
         Open Notepad
       </button>
 
-      <Updater onStatusChange={(status) => {
-        setToastMessage(status);
-        setShowToast(true);
-        setTimeout(() => setShowToast(false), 3000);
-      }} />
+      <Updater
+        onStatusChange={(status) => {
+          setToastMessage(status);
+          setShowToast(true);
+          setTimeout(() => setShowToast(false), 3000);
+        }}
+      />
 
       {showToast && <Toast message={toastMessage} />}
-
-      {version && <div className="absolute bottom-4 right-4 text-white/50 text-xs">v{version}</div>}
     </main>
   );
 }

@@ -1,58 +1,76 @@
 import { useState, useEffect } from "react";
 import { check } from "@tauri-apps/plugin-updater";
 import { relaunch } from "@tauri-apps/plugin-process";
+import { getVersion } from "@tauri-apps/api/app";
 
 function Updater({ onStatusChange }) {
-  const [isChecking, setIsChecking] = useState(false);
+  const [updateInfo, setUpdateInfo] = useState(null);
+  const [version, setVersion] = useState("");
 
-  // Check for updates on component mount
+  // Get app version
   useEffect(() => {
-    checkForUpdates();
+    getVersion().then(setVersion);
   }, []);
 
-  const checkForUpdates = async () => {
-    setIsChecking(true);
-    
+  // Check for updates silently on component mount
+  useEffect(() => {
+    checkForUpdatesSilently();
+  }, []);
+
+  const checkForUpdatesSilently = async () => {
     try {
       const update = await check();
-      
-      if (update?.available) {
-        const yes = confirm(
-          `Update available: ${update.version}\n\nCurrent version: 0.1.0\n\nDo you want to install it now?`
-        );
 
-        if (yes) {
-          onStatusChange?.("Downloading update...");
-
-          await update.downloadAndInstall();
-          
-          onStatusChange?.("Update installed! Restarting...");
-          setTimeout(async () => {
-            await relaunch();
-          }, 1000);
-        }
-      } else {
-        // Show "No updates available" toast
-        onStatusChange?.("No updates available");
+      if (update) {
+        setUpdateInfo(update);
       }
     } catch (error) {
       console.error("Update check failed:", error);
-      // Show "No updates available" for any error (including missing release)
-      onStatusChange?.("No updates available");
-    } finally {
-      setIsChecking(false);
+    }
+  };
+
+  const handleUpdateClick = async () => {
+    if (!updateInfo) return;
+
+    const yes = confirm(
+      `Update available: ${updateInfo.version}\n\nDo you want to install it now?`
+    );
+
+    if (yes) {
+      onStatusChange?.("Downloading update...");
+
+      try {
+        await updateInfo.downloadAndInstall();
+
+        onStatusChange?.("Update installed! Restarting...");
+        setTimeout(async () => {
+          await relaunch();
+        }, 1000);
+      } catch (error) {
+        console.error("Update installation failed:", error);
+        onStatusChange?.("Update installation failed");
+      }
     }
   };
 
   return (
-    <button
-      className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 text-white text-sm
-      px-4 py-2 rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-      onClick={checkForUpdates}
-      disabled={isChecking}
-    >
-      {isChecking ? "Checking..." : "Check for Updates"}
-    </button>
+    <>
+      {version && (
+        <div className="absolute bottom-4 right-4 flex items-center gap-2">
+          <span className="text-white/50 text-xs">v{version}</span>
+          {updateInfo && (
+            <button
+              onClick={handleUpdateClick}
+              className="bg-green-500 hover:bg-green-600 text-white text-[10px] px-2 py-1 rounded-md
+              shadow-lg transition-all duration-200 animate-pulse hover:animate-none font-medium"
+              title="Click to update"
+            >
+              New Update
+            </button>
+          )}
+        </div>
+      )}
+    </>
   );
 }
 
