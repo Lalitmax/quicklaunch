@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    apps_starter_lib::run()
+    quicklaunch_lib::run()
 }
