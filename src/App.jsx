@@ -2,6 +2,7 @@ import { useState } from "react";
 import { invoke } from "@tauri-apps/api/core";
 import "./index.css"; 
 import Toast from "./components/Toast";
+import Updater from "./components/Updater";
 
 function App() {
   const [showToast, setShowToast] = useState(false);
@@ -31,6 +32,13 @@ function App() {
       >
         Open Notepad
       </button>
+
+      <Updater onStatusChange={(status) => {
+        setToastMessage(status);
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 3000);
+      }} />
+
       {showToast && <Toast message={toastMessage} />}
     </main>
   );

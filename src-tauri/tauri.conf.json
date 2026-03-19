@@ -18,17 +18,7 @@
       }
     ],
     "security": {
-      "csp": null,
-      "capabilities": [
-        {
-          "identifier": "main-capability",
-          "description": "Capability for the main window",
-          "windows": ["main"],
-          "permissions": [
-            "opener:allow-open-path"
-          ]
-        }
-      ]
+      "csp": null
     }
   },
   "bundle": {
