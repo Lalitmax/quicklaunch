@@ -36,7 +36,6 @@
     "updater": {
       "active": true,
       "dialog": true,
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDVEN0NBRDlCRTkyNTdFREIKUldUYmZpWHBtNjE4WFFXMEt2dEdGRnVsU2tEWjB6cFpuMU1WRExaR0dQR1crQ3lvMllPc3RIWlAK",
       "endpoints": [
         "https://github.com/Lalitmax/quicklaunch/releases/latest/download/latest.json"
       ]

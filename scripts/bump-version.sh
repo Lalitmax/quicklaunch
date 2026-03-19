@@ -31,6 +31,10 @@ sed -i "s/version = \"[0-9]*\.[0-9]*\.[0-9]*\"/version = \"$NEW_VERSION\"/" src-
 echo "📝 Updating src-tauri/tauri.conf.json..."
 sed -i "s/\"version\": \"[0-9]*\.[0-9]*\.[0-9]*\"/\"version\": \"$NEW_VERSION\"/" src-tauri/tauri.conf.json
 
+# Update web/index.html (download links)
+echo "📝 Updating web/index.html..."
+sed -i "s|download/v[0-9]*\.[0-9]*\.[0-9]*/QuickLaunch_[0-9]*\.[0-9]*\.[0-9]*_x64-setup.exe|download/v$NEW_VERSION/QuickLaunch_${NEW_VERSION}_x64-setup.exe|g" web/index.html
+
 echo "✅ Version bumped to $NEW_VERSION successfully!"
 echo ""
 echo "Next steps:"
