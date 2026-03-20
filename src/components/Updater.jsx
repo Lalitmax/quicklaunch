@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { check } from "@tauri-apps/plugin-updater";
 import { relaunch } from "@tauri-apps/plugin-process";
 import { getVersion } from "@tauri-apps/api/app";
+import Swal from "sweetalert2";
 
 function Updater({ onStatusChange }) {
   const [updateInfo, setUpdateInfo] = useState(null);
@@ -37,9 +38,33 @@ function Updater({ onStatusChange }) {
   const handleUpdateClick = async () => {
     if (!updateInfo) return;
 
-    const yes = confirm(
-      `Update available: ${updateInfo.version}\n\nDo you want to install it now?`
-    );
+    const yes = await Swal.fire({
+      html: `
+        <div style="text-align: center; color: #fff;">
+          <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">⚡</div>
+          <div style="font-size: 1.05rem; font-weight: 500; margin-bottom: 0.25rem;">
+            Update Available
+          </div>
+          <div style="font-size: 0.9rem; color: #e0e7ff; opacity: 0.9;">
+            Version <b style="color: #fff; font-size: 1rem;">v${updateInfo.version}</b> is ready to install
+          </div>
+        </div>
+      `,
+      showCancelButton: true,
+      confirmButtonText: "Update",
+      cancelButtonText: "Cancel",
+      background: "#667eea",
+      color: "#fff",
+      confirmButtonColor: "#54d075",
+      cancelButtonColor: "#ffffff20",
+      buttonsStyling: false,  // Disable default styling
+      customClass: {
+        confirmButton: 'px-3 py-1 text-md cursor-pointer rounded bg-[#764ba2] text-white hover:bg-[#464ba2] hover:scale-105 transition-all duration-200 ease-in-out',
+        cancelButton: 'px-3 py-1 text-md cursor-pointer rounded bg-white/10 text-white ml-2 hover:bg-white/20 hover:scale-105 transition-all duration-200 ease-in-out'
+      },
+      width: "300px",
+      padding: "1em",
+    });
 
     if (yes) {
       onStatusChange?.("Downloading update...");

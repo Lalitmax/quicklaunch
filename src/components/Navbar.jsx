@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import settingsImg from "../assets/settings_img.png";
 
 /**
  * Displays the application header with settings icon
@@ -18,7 +19,7 @@ function Navbar() {
           <img
             onClick={() => navigate("/setting")}
             className="h-10 w-10 cursor-pointer"
-            src="src/assets/settings_img.png"
+            src={settingsImg}
             alt="Settings"
           />
         </div>

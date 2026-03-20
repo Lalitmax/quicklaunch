@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import leftArrowImg from "../assets/left_arrow.png";
 
 /**
  * Setting Component
@@ -18,7 +19,7 @@ function Setting() {
                 <img
                     onClick={() => navigate("/")}
                     className="h-10 w-10 cursor-pointer bg-white rounded-full p-0.5"
-                    src="src/assets/left_arrow.png"
+                    src={leftArrowImg}
                     alt="Settings"
                 />
             </div>
