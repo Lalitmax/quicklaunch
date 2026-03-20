@@ -14,7 +14,8 @@
       {
         "title": "QuickLaunch",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "backgroundColor": "#6f63c6"
       }
     ],
     "security": {
