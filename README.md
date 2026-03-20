@@ -72,4 +72,5 @@ git push origin v1.0.2
 - Create a GitHub release with all files
 
 **Monitor progress:** https://github.com/Lalitmax/quicklaunch/actions
+
 **Release notes:** https://github.com/Lalitmax/quicklaunch/releases
