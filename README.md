@@ -22,40 +22,25 @@ npm run tauri:build
 ## Git Commit Messages
 
 Follow these simple conventions:
-
-### Bug Fixes 🐛
 ```bash
+# If you fixed a bug
 git commit -m "fix: resolve app crash on startup"
-```
 
-### New Features ✨
-```bash
+# If you added a new feature
 git commit -m "feat: add keyboard shortcuts"
-```
 
-### Maintenance 🔧
-```bash
+# If you did maintenance work
 git commit -m "chore: bump version to 1.0.2"
-```
 
-### Documentation 📚
-```bash
+# If you updated the README
 git commit -m "docs: update README"
-```
 
-### UI/Styling 💄
-```bash
+# If you improved the UI
 git commit -m "style: improve button design"
-```
 
-### Code Refactoring ♻️
-```bash
+# If you refactored code
 git commit -m "refactor: simplify search logic"
 ```
-
-**Format:** `<type>: <short description>`
-
-**Common types:** `fix`, `feat`, `chore`, `docs`, `style`, `refactor`, `test`
 
 ## How to Make a Release
 
