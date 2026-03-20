@@ -33,6 +33,13 @@ function App() {
       >
         Open Notepad
       </button>
+      <button
+        className="bg-white/90 hover:bg-white text-purple-700 font-semibold
+        px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer"
+        onClick={() => openApp("outlook")}
+      >
+        Open Outlook
+      </button>
 
       <Updater
         onStatusChange={(status) => {
