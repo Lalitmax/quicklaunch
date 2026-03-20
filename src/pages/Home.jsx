@@ -14,9 +14,10 @@ function Home() {
         try {
             const result = await invoke("open_app", { app: appName });
             console.log(result);
+            await new Promise(resolve => setTimeout(resolve, 400));
             setToastMessage(`${appName} opened successfully!`);
             setShowToast(true);
-            setTimeout(() => setShowToast(false), 3000);
+            setTimeout(() => setShowToast(false), 1500);
         } catch (error) {
             console.error(`Failed to open ${appName}:`, error);
             setToastMessage(`Failed to open ${appName}`);
