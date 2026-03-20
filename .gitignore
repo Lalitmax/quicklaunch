@@ -37,3 +37,6 @@ latest.json
 *.njsproj
 *.sln
 *.sw?
+
+# promts
+promts.txt
