@@ -10,7 +10,8 @@
     "tauri:dev": "tauri dev",
     "tauri:build": "tauri build",
     "sign": "tauri signer sign --private-key-path .tauri/myapp.key --",
-    "bump-version": "bash scripts/bump-version.sh"
+    "bump-version": "bash scripts/bump-version.sh",
+    "release": "bash scripts/release.sh"
   },
   "dependencies": {
     "@tauri-apps/api": "^2",
