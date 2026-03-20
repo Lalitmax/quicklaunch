@@ -38,7 +38,7 @@ function Updater({ onStatusChange }) {
   const handleUpdateClick = async () => {
     if (!updateInfo) return;
 
-    const yes = await Swal.fire({
+    const result = await Swal.fire({
       html: `
         <div style="text-align: center; color: #fff;">
           <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">⚡</div>
@@ -66,7 +66,7 @@ function Updater({ onStatusChange }) {
       padding: "1em",
     });
 
-    if (yes) {
+    if (result.isConfirmed) {
       onStatusChange?.("Downloading update...");
 
       try {
