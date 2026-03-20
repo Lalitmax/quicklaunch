@@ -66,8 +66,8 @@ function Updater({ onStatusChange }) {
           {updateInfo && (
             <button
               onClick={handleUpdateClick}
-              className="bg-green-500 hover:bg-green-600 text-white text-[10px] px-2 py-1 rounded-md
-              shadow-lg transition-all duration-200 animate-pulse hover:animate-none font-medium"
+              className="cursor-pointer bg-[#667eea] text-white text-[10px] px-2 py-1 rounded-md-500 text-white text-[10px] px-2 py-1 rounded-md
+              shadow-md transition-all duration-200 animate-pulse animate-ping hover:animate-none font-medium"
               title="Click to update"
             >
               New Update
