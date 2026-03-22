@@ -18,6 +18,8 @@ function Urls() {
     const [isValid, setIsValid] = useState(false);
     const [openMenuId, setOpenMenuId] = useState(null);
     const [tooltip, setTooltip] = useState(null);
+    const [toastMessage, setToastMessage] = useState("");
+    const [showToast, setShowToast] = useState(false);
 
     // Load saved URLs on component mount
     useEffect(() => {
@@ -71,6 +73,9 @@ function Urls() {
     const handleAddUrl = async () => {
         // Early return if no URL entered
         if (!inputUrl.trim()) {
+            setToastMessage("You can't add an empty URL!");
+            setShowToast(true);
+            setTimeout(() => setShowToast(false), 2500);
             return;
         }
 
@@ -247,6 +252,7 @@ function Urls() {
                 </div>
             </div>
             {isValid && <Toast message="URL already exists or invalid!" />}
+            {showToast && <Toast message={toastMessage} />}
         </div>
     );
 }

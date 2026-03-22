@@ -88,7 +88,10 @@ function Apps() {
     // Add app to list and save to storage
     const handleAddApp = (appData = null) => {
         // Early return if no app data and search term is empty
-        if (!appData && !searchTerm.trim()) {
+        if (!searchTerm.trim()) {
+            setToastMessage("You can't add an empty app!");
+            setShowToast(true);
+            setTimeout(() => setShowToast(false), 2500);
             return;
         }
 
