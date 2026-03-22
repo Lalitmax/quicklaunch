@@ -1,0 +1,610 @@
+[
+  {
+    "name": "Druva inSync Help",
+    "path": "C:\\Program Files\\Druva\\inSync\\8.1.1\\amd64\\inSyncHelp.exe"
+  },
+  {
+    "name": "Dev-C++",
+    "path": "C:\\Program Files (x86)\\Dev-Cpp\\devcpp.exe"
+  },
+  {
+    "name": "Access",
+    "path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\MSACCESS.EXE"
+  },
+  {
+    "name": "PuTTYgen",
+    "path": "C:\\Program Files\\PuTTY\\puttygen.exe"
+  },
+  {
+    "name": "x64 Native Tools Command Prompt for VS",
+    "path": "C:\\Windows\\System32\\cmd.exe"
+  },
+  {
+    "name": "IDLE (Python 3.13 64-bit)",
+    "path": "C:\\Users\\lyadav\\AppData\\Local\\Programs\\Python\\Python313\\pythonw.exe"
+  },
+  {
+    "name": "PowerPoint",
+    "path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\POWERPNT.EXE"
+  },
+  {
+    "name": "Python 3.13.7 Core Interpreter (64-bit)",
+    "path": ""
+  },
+  {
+    "name": "Python 3.13 Manuals (64-bit)",
+    "path": "C:\\Users\\lyadav\\AppData\\Local\\Programs\\Python\\Python313\\Doc\\html\\index.html"
+  },
+  {
+    "name": "Documentation for Desktop Apps",
+    "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Shortcuts\\DesktopAppsDocumentation.url"
+  },
+  {
+    "name": "OneDrive",
+    "path": "C:\\Program Files\\Microsoft OneDrive\\OneDrive.exe"
+  },
+  {
+    "name": "7-Zip Help",
+    "path": "C:\\Program Files\\7-Zip\\7-zip.chm"
+  },
+  {
+    "name": "Windows PowerShell",
+    "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+  },
+  {
+    "name": "Visual Studio Code",
+    "path": "C:\\Users\\lyadav\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+  },
+  {
+    "name": "7-Zip 25.01 (x64 edition)",
+    "path": ""
+  },
+  {
+    "name": "Amazon Corretto (x64)",
+    "path": ""
+  },
+  {
+    "name": "copilot",
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome_proxy.exe"
+  },
+  {
+    "name": "Uninstall Dev-C++",
+    "path": "C:\\Program Files (x86)\\Dev-Cpp\\uninstall.exe"
+  },
+  {
+    "name": "Python 3.13.7 Tcl/Tk Support (64-bit)",
+    "path": ""
+  },
+  {
+    "name": "Uninstall Ivanti Secure Access Client",
+    "path": "C:\\Program Files (x86)\\Pulse Secure\\Pulse\\PulseUninstall.exe"
+  },
+  {
+    "name": "Git CMD",
+    "path": "C:\\Program Files\\Git\\git-cmd.exe"
+  },
+  {
+    "name": "Database Compare",
+    "path": "C:\\Program Files\\Microsoft Office\\root\\Client\\AppVLP.exe"
+  },
+  {
+    "name": "Termius",
+    "path": "C:\\Users\\lyadav\\AppData\\Local\\Programs\\Termius\\Termius.exe"
+  },
+  {
+    "name": "Repair Ivanti Secure Access Client",
+    "path": "C:\\Program Files (x86)\\Pulse Secure\\Pulse\\PulseUninstall.exe"
+  },
+  {
+    "name": "Windows App Cert Kit",
+    "path": "C:\\Program Files (x86)\\Windows Kits\\10\\App Certification Kit\\appcertui.exe"
+  },
+  {
+    "name": "Python 3.13.7 Development Libraries (64-bit)",
+    "path": ""
+  },
+  {
+    "name": "Telemetry Log for Office",
+    "path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\msoev.exe"
+  },
+  {
+    "name": "Developer Command Prompt for VS 2022",
+    "path": "C:\\Windows\\System32\\cmd.exe"
+  },
+  {
+    "name": "Brave",
+    "path": "C:\\Users\\lyadav\\AppData\\Local\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
+  },
+  {
+    "name": "DeepSeek - Into the Unknown",
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome_proxy.exe"
+  },
+  {
+    "name": "Gemini",
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome_proxy.exe"
+  },
+  {
+    "name": "Comet",
+    "path": "C:\\Users\\lyadav\\AppData\\Local\\Perplexity\\Comet\\Application\\comet.exe"
+  },
+  {
+    "name": "Oracle VirtualBox 7.2.2",
+    "path": ""
+  },
+  {
+    "name": "Spreadsheet Compare",
+    "path": "C:\\Program Files\\Microsoft Office\\root\\Client\\AppVLP.exe"
+  },
+  {
+    "name": "Microsoft Windows Desktop Runtime - 9.0.13 (x64)",
+    "path": ""
+  },
+  {
+    "name": "Microsoft Visual C++ 2022 X64 Additional Runtime - 14.50.35719",
+    "path": ""
+  },
+  {
+    "name": "Python 3.13.7 pip Bootstrap (64-bit)",
+    "path": ""
+  },
+  {
+    "name": "PowerToys (Preview)",
+    "path": "C:\\Users\\lyadav\\AppData\\Local\\PowerToys\\PowerToys.exe"
+  },
+  {
+    "name": "Microsoft Intune Management Extension",
+    "path": "C:\\Program Files (x86)\\Microsoft Intune Management Extension\\AgentExecutor.exe"
+  },
+  {
+    "name": "vs_minshellinteropx64msi",
+    "path": ""
+  },
+  {
+    "name": "Office Language Preferences",
+    "path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\SETLANG.EXE"
+  },
+  {
+    "name": "vs_devenx64vmsi",
+    "path": ""
+  },
+  {
+    "name": "Windows SDK DirectX x64 Remote",
+    "path": ""
+  },
+  {
+    "name": "Tools for Desktop Apps",
+    "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Shortcuts\\DesktopAppsToolsDocumentation.url"
+  },
+  {
+    "name": "Microsoft Teams Meeting Add-in for Microsoft Office",
+    "path": ""
+  },
+  {
+    "name": "PuTTY release 0.83 (64-bit)",
+    "path": ""
+  },
+  {
+    "name": "Microsoft .NET Host FX Resolver - 8.0.24 (x64)",
+    "path": ""
+  },
+  {
+    "name": "Windows Subsystem for Linux",
+    "path": ""
+  },
+  {
+    "name": "Send to OneNote",
+    "path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\ONENOTEM.EXE"
+  },
+  {
+    "name": "PuTTY Web Site",
+    "path": "C:\\Program Files\\PuTTY\\website.url"
+  },
+  {
+    "name": "Grammarly",
+    "path": "C:\\Users\\lyadav\\AppData\\Local\\Grammarly\\DesktopIntegrations\\Grammarly.Desktop.exe"
+  },
+  {
+    "name": "Microsoft Visual C++ 2022 X64 Minimum Runtime - 14.50.35719",
+    "path": ""
+  },
+  {
+    "name": "DiagnosticsHub_CollectionService",
+    "path": ""
+  },
+  {
+    "name": "Python 3.13 (64-bit)",
+    "path": "C:\\Users\\lyadav\\AppData\\Local\\Programs\\Python\\Python313\\python.exe"
+  },
+  {
+    "name": "Druva inSync",
+    "path": "C:\\Program Files\\Druva\\inSync\\8.1.1\\amd64\\inSyncAgent.exe"
+  },
+  {
+    "name": "Documentation for UWP Apps",
+    "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Shortcuts\\UWPAppsDocumentation.url"
+  },
+  {
+    "name": "Microsoft Visual C++ 2022 X64 Debug Runtime - 14.50.35719",
+    "path": ""
+  },
+  {
+    "name": "vs_communityx64msi",
+    "path": ""
+  },
+  {
+    "name": "Git Release Notes",
+    "path": "C:\\Program Files\\Git\\ReleaseNotes.html"
+  },
+  {
+    "name": "Sample UWP Apps",
+    "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Shortcuts\\UWPAppsSamples.url"
+  },
+  {
+    "name": "Application Verifier x64 External Package (DesktopEditions)",
+    "path": ""
+  },
+  {
+    "name": "Python 3.13.7 Executables (64-bit)",
+    "path": ""
+  },
+  {
+    "name": "x64_x86 Cross Tools Command Prompt for VS",
+    "path": "C:\\Windows\\System32\\cmd.exe"
+  },
+  {
+    "name": "Microsoft .NET Host - 9.0.13 (x64)",
+    "path": ""
+  },
+  {
+    "name": "Microsoft .NET Host - 8.0.24 (x64)",
+    "path": ""
+  },
+  {
+    "name": "x64 Native Tools Command Prompt for VS 2022",
+    "path": "C:\\Windows\\System32\\cmd.exe"
+  },
+  {
+    "name": "IntelliTraceProfilerProxy",
+    "path": ""
+  },
+  {
+    "name": "Visual Studio 2022",
+    "path": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\devenv.exe"
+  },
+  {
+    "name": "QuickLaunch",
+    "path": "C:\\Users\\lyadav\\AppData\\Local\\QuickLaunch\\quicklaunch.exe"
+  },
+  {
+    "name": "Google Play Games",
+    "path": "C:\\Program Files\\Google\\Play Games\\Bootstrapper.exe"
+  },
+  {
+    "name": "7-Zip File Manager",
+    "path": "C:\\Program Files\\7-Zip\\7zFM.exe"
+  },
+  {
+    "name": "Microsoft Windows Desktop Runtime - 8.0.24 (x64)",
+    "path": ""
+  },
+  {
+    "name": "Dell Command Update",
+    "path": "C:\\Program Files (x86)\\Dell\\CommandUpdate\\DellCommandUpdate.exe"
+  },
+  {
+    "name": "Application Verifier (WOW)",
+    "path": "C:\\Windows\\SysWOW64\\appverif.exe"
+  },
+  {
+    "name": "Microsoft Update Health Tools",
+    "path": ""
+  },
+  {
+    "name": "Druva inSync 8.1.1",
+    "path": ""
+  },
+  {
+    "name": "Git",
+    "path": "C:\\Program Files\\Git\\"
+  },
+  {
+    "name": "Python 3.13.7 Standard Library (64-bit)",
+    "path": ""
+  },
+  {
+    "name": "Docker Desktop",
+    "path": "C:\\Program Files\\Docker\\Docker"
+  },
+  {
+    "name": "icecap_collection_x64",
+    "path": ""
+  },
+  {
+    "name": "x64_x86 Cross Tools Command Prompt for VS 2022",
+    "path": "C:\\Windows\\System32\\cmd.exe"
+  },
+  {
+    "name": "Tools for UWP Apps",
+    "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Shortcuts\\UWPAppsToolsDocumentation.url"
+  },
+  {
+    "name": "Windows PowerShell (x86)",
+    "path": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe"
+  },
+  {
+    "name": "Git GUI",
+    "path": "C:\\Program Files\\Git\\cmd\\git-gui.exe"
+  },
+  {
+    "name": "Add a new TAP virtual ethernet adapter",
+    "path": "C:\\Program Files\\TAP-Windows\\bin\\addtap.bat"
+  },
+  {
+    "name": "Dell SupportAssist",
+    "path": "C:\\Program Files\\Dell\\SupportAssistAgent\\"
+  },
+  {
+    "name": "Pageant",
+    "path": "C:\\Program Files\\PuTTY\\pageant.exe"
+  },
+  {
+    "name": "ESET SysInspector",
+    "path": "C:\\Program Files\\ESET\\ESET Security\\SysInspector.exe"
+  },
+  {
+    "name": "Install Additional Tools for Node.js",
+    "path": "C:\\Windows\\System32\\cmd.exe"
+  },
+  {
+    "name": "vs_minshellx64msi",
+    "path": ""
+  },
+  {
+    "name": "Application Verifier x64 External Package (OnecoreUAP)",
+    "path": ""
+  },
+  {
+    "name": "VS Script Debugging Common",
+    "path": ""
+  },
+  {
+    "name": "Python 3.13.7 Test Suite (64-bit)",
+    "path": ""
+  },
+  {
+    "name": "ESET Management Agent",
+    "path": ""
+  },
+  {
+    "name": "MobaXterm",
+    "path": "C:\\Program Files (x86)\\Mobatek\\MobaXterm\\MobaXterm.exe"
+  },
+  {
+    "name": "OneNote",
+    "path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\ONENOTE.EXE"
+  },
+  {
+    "name": "Java(TM) SE Development Kit 25.0.1 (64-bit)",
+    "path": "C:\\Program Files\\Java\\jdk-25\\"
+  },
+  {
+    "name": "Developer PowerShell for VS 2022",
+    "path": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe"
+  },
+  {
+    "name": "ESET Endpoint Security",
+    "path": "C:\\Program Files\\ESET\\ESET Security\\ecmds.exe"
+  },
+  {
+    "name": "PuTTY",
+    "path": "C:\\Program Files\\PuTTY\\putty.exe"
+  },
+  {
+    "name": "apps-starter",
+    "path": "C:\\Users\\lyadav\\AppData\\Local\\apps-starter\\apps-starter.exe"
+  },
+  {
+    "name": "Microsoft 365 Apps for enterprise - en-us",
+    "path": "C:\\Program Files\\Microsoft Office"
+  },
+  {
+    "name": "YouTube",
+    "path": "C:\\Users\\lyadav\\AppData\\Local\\BraveSoftware\\Brave-Browser\\Application\\chrome_proxy.exe"
+  },
+  {
+    "name": "Google Chrome",
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  },
+  {
+    "name": "x86_x64 Cross Tools Command Prompt for VS 2022",
+    "path": "C:\\Windows\\System32\\cmd.exe"
+  },
+  {
+    "name": "Microsoft .NET Host FX Resolver - 9.0.13 (x64)",
+    "path": ""
+  },
+  {
+    "name": "Application Verifier (X64)",
+    "path": "C:\\Windows\\System32\\appverif.exe"
+  },
+  {
+    "name": "Office 16 Click-to-Run Extensibility Component",
+    "path": ""
+  },
+  {
+    "name": "x86 Native Tools Command Prompt for VS",
+    "path": "C:\\Windows\\System32\\cmd.exe"
+  },
+  {
+    "name": "Dell SupportAssist OS Recovery Plugin for Dell Update",
+    "path": "C:\\Program Files\\Dell\\SARemediation\\plugin\\"
+  },
+  {
+    "name": "Sticky Notes (new)",
+    "path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\ONENOTE.EXE"
+  },
+  {
+    "name": "Microsoft Visual Studio Installer",
+    "path": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\""
+  },
+  {
+    "name": "Ivanti Secure Access Client",
+    "path": "C:\\Program Files (x86)\\Common Files\\Pulse Secure\\JamUI\\Pulse.exe"
+  },
+  {
+    "name": "x86 Native Tools Command Prompt for VS 2022",
+    "path": "C:\\Windows\\System32\\cmd.exe"
+  },
+  {
+    "name": "Node.js",
+    "path": "C:\\Program Files\\nodejs\\node.exe"
+  },
+  {
+    "name": "Visual Studio",
+    "path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\IDE\\devenv.exe"
+  },
+  {
+    "name": "Developer PowerShell for VS",
+    "path": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe"
+  },
+  {
+    "name": "Python 3.13.7 Add to Path (64-bit)",
+    "path": ""
+  },
+  {
+    "name": "Git Bash",
+    "path": "C:\\Program Files\\Git\\git-bash.exe"
+  },
+  {
+    "name": "Developer Command Prompt for VS",
+    "path": "C:\\Windows\\System32\\cmd.exe"
+  },
+  {
+    "name": "Dell Core Services",
+    "path": "C:\\Program Files\\Dell\\"
+  },
+  {
+    "name": "Notepad++",
+    "path": "C:\\Program Files (x86)\\Notepad++\\notepad++.exe"
+  },
+  {
+    "name": "Qualys Cloud Security Agent",
+    "path": ""
+  },
+  {
+    "name": "Node.js command prompt",
+    "path": "C:\\Windows\\System32\\cmd.exe"
+  },
+  {
+    "name": "PSFTP",
+    "path": "C:\\Program Files\\PuTTY\\psftp.exe"
+  },
+  {
+    "name": "ChatGPT",
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome_proxy.exe"
+  },
+  {
+    "name": "Excel",
+    "path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE"
+  },
+  {
+    "name": "License",
+    "path": "C:\\Program Files (x86)\\Dev-Cpp\\COPYING.txt"
+  },
+  {
+    "name": "Windows App Certification Kit Native Components",
+    "path": ""
+  },
+  {
+    "name": "Uninstall Druva inSync",
+    "path": "C:\\Windows\\System32\\msiexec.exe"
+  },
+  {
+    "name": "Proton VPN",
+    "path": "C:\\Program Files\\Proton\\VPN\\ProtonVPN.Launcher.exe"
+  },
+  {
+    "name": "Zoom Workplace",
+    "path": "C:\\Program Files (x86)\\Zoom\\bin\\Zoom.exe"
+  },
+  {
+    "name": "Microsoft .NET Runtime - 8.0.24 (x64)",
+    "path": ""
+  },
+  {
+    "name": "Publisher",
+    "path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\MSPUB.EXE"
+  },
+  {
+    "name": "Delete ALL TAP virtual ethernet adapters",
+    "path": "C:\\Program Files\\TAP-Windows\\bin\\deltapall.bat"
+  },
+  {
+    "name": "Microsoft 365 - en-gb",
+    "path": "C:\\Program Files\\Microsoft Office"
+  },
+  {
+    "name": "Microsoft OneNote - en-us",
+    "path": "C:\\Program Files\\Microsoft Office"
+  },
+  {
+    "name": "Uninstall Node.js",
+    "path": "C:\\Windows\\SysWOW64\\msiexec.exe"
+  },
+  {
+    "name": "Universal CRT Tools x64",
+    "path": ""
+  },
+  {
+    "name": "Sample Desktop Apps",
+    "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Shortcuts\\DesktopAppsSamples.url"
+  },
+  {
+    "name": "Microsoft .NET Runtime - 9.0.13 (x64)",
+    "path": ""
+  },
+  {
+    "name": "Word",
+    "path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE"
+  },
+  {
+    "name": "MySQL Workbench 8.0 CE",
+    "path": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0 CE\\MySQLWorkbench.exe"
+  },
+  {
+    "name": "x86_x64 Cross Tools Command Prompt for VS",
+    "path": "C:\\Windows\\System32\\cmd.exe"
+  },
+  {
+    "name": "Microsoft Edge",
+    "path": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+  },
+  {
+    "name": "Visual Studio Installer",
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\setup.exe"
+  },
+  {
+    "name": "Office 16 Click-to-Run Licensing Component",
+    "path": ""
+  },
+  {
+    "name": "PuTTY Manual",
+    "path": "C:\\Program Files\\PuTTY\\putty.chm"
+  },
+  {
+    "name": "Python 3.13 Module Docs (64-bit)",
+    "path": "C:\\Users\\lyadav\\AppData\\Local\\Programs\\Python\\Python313\\python.exe"
+  },
+  {
+    "name": "DeepSeek",
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome_proxy.exe"
+  },
+  {
+    "name": "Debuggable Package Manager",
+    "path": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe"
+  },
+  {
+    "name": "Python 3.13.7 Documentation (64-bit)",
+    "path": ""
+  }
+]

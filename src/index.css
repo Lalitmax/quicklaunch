@@ -4,6 +4,21 @@
   .animate-slide-up {
     animation: slideUp 0.3s ease-out;
   }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @layer base {
@@ -28,4 +43,26 @@
     height: 100%;
     overflow: hidden;
   }
+}
+
+/* Compact SweetAlert2 dialog */
+.swal-compact {
+  padding: 1rem 1.25rem !important;
+  font-size: 0.9rem !important;
+  min-height: auto !important;
+  width: 280px !important;
+  border-radius: 12px !important;
+}
+
+.swal-compact strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+.swal-compact p {
+  margin: 0;
+  color: #666;
+  line-height: 1.3;
 }

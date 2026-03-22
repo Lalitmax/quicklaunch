@@ -1,0 +1,179 @@
+{
+  "apps": [
+    {
+      "name": "Google Chrome",
+      "path": "chrome",
+      "icon": "🌐",
+      "keywords": ["chrome", "browser", "google", "web"]
+    },
+    {
+      "name": "Brave",
+      "path": "brave",
+      "icon": "🌐",
+      "keywords": ["brave", "browser", "web"]
+    },
+    {
+      "name": "Opera",
+      "path": "opera",
+      "icon": "🌐",
+      "keywords": ["opera", "browser", "web"]
+    },
+    { 
+      "name": "termius",
+      "path": "%LOCALAPPDATA%\\Programs\\Termius\\Termius.exe",
+      "icon": "🌐",
+      "keywords": ["termius", "ssh", "terminal", "console"]
+    },
+    {
+      "name": "Microsoft Edge",
+      "path": "msedge",
+      "icon": "🌐",
+      "keywords": ["edge", "browser", "microsoft", "web"]
+    },
+    {
+      "name": "Firefox",
+      "path": "firefox",
+      "icon": "🦊",
+      "keywords": ["firefox", "browser", "mozilla", "web"]
+    },
+    {
+      "name": "MobaXterm",
+      "path": "C:\\Program Files (x86)\\Mobatek\\MobaXterm\\MobaXterm.exe",
+      "icon": "�",
+      "keywords": ["mobaxterm", "terminal", "ssh", "telnet"]
+    },
+    {
+      "name": "Visual Studio Code",
+      "path": "code",
+      "icon": "�",
+      "keywords": ["vscode", "code", "vs code", "editor", "visual studio"]
+    },
+    {
+      "name": "Notepad",
+      "path": "notepad",
+      "icon": "📄",
+      "keywords": ["notepad", "text", "editor"]
+    },
+    {
+      "name": "Notepad++",
+      "path": "notepad++",
+      "icon": "📄",
+      "keywords": ["notepad++", "notepad plus", "text", "editor", "npp"]
+    },
+    {
+      "name": "Microsoft Word",
+      "path": "winword",
+      "icon": "�",
+      "keywords": ["word", "microsoft word", "doc", "office"]
+    },
+    {
+      "name": "Microsoft Excel  ",
+      "path": "excel",
+      "icon": "�",
+      "keywords": ["excel", "spreadsheet", "office", "calc"]
+    },
+    {
+      "name": "Microsoft PowerPoint",
+      "path": "powerpnt",
+      "icon": "�",
+      "keywords": ["powerpoint", "ppt", "presentation", "office"]
+    },
+    {
+      "name": "Microsoft Outlook",
+      "path": "outlook",
+      "icon": "�",
+      "keywords": ["outlook", "email", "mail", "office"]
+    },
+    {
+      "name": "Microsoft Teams",
+      "path": "teams",
+      "icon": "💬",
+      "keywords": ["teams", "microsoft teams", "chat", "meeting"]
+    },
+    {
+      "name": "Command Prompt",
+      "path": "cmd",
+      "icon": "�",
+      "keywords": ["cmd", "command", "terminal", "console"]
+    },
+    {
+      "name": "PowerShell",
+      "path": "powershell",
+      "icon": "�",
+      "keywords": ["powershell", "terminal", "console", "ps"]
+    },
+    {
+      "name": "Windows Terminal",
+      "path": "wt",
+      "icon": "�",
+      "keywords": ["terminal", "windows terminal", "wt", "console"]
+    },
+    {
+      "name": "Calculator",
+      "path": "calc",
+      "icon": "�",
+      "keywords": ["calculator", "calc", "math"]
+    },
+    {
+      "name": "Paint",
+      "path": "mspaint",
+      "icon": "🎨",
+      "keywords": ["paint", "mspaint", "drawing"]
+    },
+    {
+      "name": "Snipping Tool",
+      "path": "snippingtool",
+      "icon": "✂️",
+      "keywords": ["snipping", "screenshot", "capture"]
+    },
+    {
+      "name": "Task Manager",
+      "path": "taskmgr",
+      "icon": "⚙️",
+      "keywords": ["task manager", "taskmgr", "processes", "performance"]
+    },
+    {
+      "name": "Control Panel",
+      "path": "control",
+      "icon": "⚙️",
+      "keywords": ["control panel", "control", "settings"]
+    },
+    {
+      "name": "Settings",
+      "path": "ms-settings:",
+      "icon": "⚙️",
+      "keywords": ["settings", "preferences", "configuration"]
+    },
+    {
+      "name": "File Explorer",
+      "path": "explorer",
+      "icon": "�",
+      "keywords": ["explorer", "file explorer", "files", "folders"]
+    },
+    {
+      "name": "Registry Editor",
+      "path": "regedit",
+      "icon": "�",
+      "keywords": ["registry", "regedit", "registry editor"]
+    },
+    {
+      "name": "Character Map",
+      "path": "charmap",
+      "icon": "�",
+      "keywords": ["character map", "charmap", "symbols", "characters"]
+    },
+    {
+      "name": "Disk Cleanup",
+      "path": "cleanmgr",
+      "icon": "🧹",
+      "keywords": ["disk cleanup", "cleanmgr", "clean", "storage"]
+    },
+    {
+      "name": "System Information",
+      "path": "msinfo32",
+      "icon": "ℹ️",
+      "keywords": ["system info", "msinfo32", "system information", "specs"]
+    }
+  ]
+}
+

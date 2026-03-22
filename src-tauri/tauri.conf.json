@@ -13,8 +13,8 @@
     "windows": [
       {
         "title": "QuickLaunch",
-        "width": 700,
-        "height": 500,
+        "width": 800,
+        "height": 600,
         "backgroundColor": "#6f63c6"
       }
     ],

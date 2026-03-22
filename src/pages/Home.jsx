@@ -1,13 +1,23 @@
 import { useState } from "react";
 import { invoke } from "@tauri-apps/api/core";
 import Toast from "../components/Toast";
-import Updater from "../components/Updater";
 import Navbar from "../components/Navbar";
-import AppLaunchClose from "../components/AppLaunchClose";
+import OpenCloseHandle from "../components/OpenCloseHandle";
+import Updater from "../components/Updater";
 
 function Home() {
     const [showToast, setShowToast] = useState(false);
     const [toastMessage, setToastMessage] = useState("");
+
+    // Open url in browser method
+    const openUrlInBrowser = async (url, browser) => {
+        try {
+            const result = await invoke("open_url_in_browser", { url, browser });
+            console.log(result);
+        } catch (error) {
+            console.error(`Failed to open ${url} in ${browser}:`, error);
+        }
+    };
 
     // Open app method
     const openApp = async (appName) => {
@@ -27,11 +37,11 @@ function Home() {
     };
 
     return (
-        <main className="flex flex-col h-screen w-screen overflow-hidden">
+        <main className="flex flex-col h-screen w-screen overflow-hidden select-none">
             <Navbar />
 
             <div className="flex-1 flex justify-center items-center">
-                <AppLaunchClose openApp={openApp} />
+                <OpenCloseHandle openApp={openApp} openUrlInBrowser={openUrlInBrowser} />
             </div>
 
             <div className="flex justify-end items-end p-4">
