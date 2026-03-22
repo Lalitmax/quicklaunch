@@ -86,7 +86,7 @@
     },
     {
       "name": "Microsoft Teams",
-      "path": "teams",
+      "path": "ms-teams:",
       "icon": "💬",
       "keywords": ["teams", "microsoft teams", "chat", "meeting"]
     },
