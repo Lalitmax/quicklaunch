@@ -44,7 +44,7 @@
     },
     {
       "name": "Visual Studio Code",
-      "path": "%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe",
+      "path": "code",
       "icon": "�",
       "keywords": ["vscode", "code", "vs code", "editor", "visual studio"]
     },

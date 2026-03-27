@@ -23,7 +23,7 @@ pub fn open_app(app: &str) -> Result<String, String> {
     const CREATE_NO_WINDOW: u32 = 0x08000000;
 
     let result = Command::new("cmd")
-        .args(&["/C", "start", "", app])
+        .args(&["/C", "start", "/B", "", app])
         .creation_flags(CREATE_NO_WINDOW)
         .spawn();
 
