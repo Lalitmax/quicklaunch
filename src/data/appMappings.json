@@ -173,6 +173,13 @@
       "path": "msinfo32",
       "icon": "ℹ️",
       "keywords": ["system info", "msinfo32", "system information", "specs"]
+    },
+    {
+      "name": "Slack",
+      "path": "slack",
+      "icon": "slack",
+      "keywords": ["slack", "messaging", "chat"]
+      
     }
   ]
 }

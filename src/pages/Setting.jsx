@@ -20,7 +20,7 @@ function Setting() {
     return (
         <div className="flex flex-col h-screen p-2 select-none">
             {/* Header */}
-            <div className="flex justify-between items-center px-3 py-3 pb-5 w-full animate-fade-in">
+            <div className="flex justify-between items-center px-3 py-3 pb-5 w-full">
                 {/* Back button with glassmorphism */}
                 <div className="flex-1">
                     <button
@@ -33,7 +33,7 @@ function Setting() {
                     >
                         <img
                             className="h-9 w-9 transition-transform duration-200
-                                group-hover:-translate-x-1"
+                                group-hover:-translate-x-0.5"
                             src={leftArrowImg}
                             alt="Back"
                         />
