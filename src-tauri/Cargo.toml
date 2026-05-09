@@ -1,6 +1,6 @@
 [package]
 name = "quicklaunch"
-version = "1.1.6"
+version = "1.1.7"
 description = "A Tauri App"
 authors = ["Lalitmax <lalitmaxy@gmail.com>"]
 edition = "2021"
