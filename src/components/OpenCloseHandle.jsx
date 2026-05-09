@@ -10,11 +10,11 @@ import Swal from "sweetalert2";
  *
  * @param {Object} props - Component props
  * @param {Function} props.openApp - Method to open an app
- * @param {Function} props.openUrlInBrowser - Method to open a URL in a browser
+ * @param {Function} props.openUrl - Method to open a URL in a browser
  *
  * @returns {JSX.Element} Rendered app launcher UI
  */
-function OpenCloseHandle({ openApp, openUrlInBrowser }) {
+function OpenCloseHandle({ openApp, openUrl }) {
     const [apps, setApps] = useState([]);
     const [urls, setUrls] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -66,7 +66,7 @@ function OpenCloseHandle({ openApp, openUrlInBrowser }) {
         // Open all checked URLs
         for (const urlData of checkedUrls) {
             try {
-                await openUrlInBrowser(urlData.url, urlData.browser);
+                await openUrl(urlData.url, urlData.browser);
                 await new Promise(resolve => setTimeout(resolve, 200));
             } catch (error) {
                 console.error(`Failed to open ${urlData.url}:`, error);
@@ -74,7 +74,7 @@ function OpenCloseHandle({ openApp, openUrlInBrowser }) {
         }
 
         await Swal.fire({
-            html: `<strong>✓ Launched!</strong><p>Opened ${checkedApps.length} app(s) and ${checkedUrls.length} URL(s)</p>`,
+            html: `<strong>✓ Launched!</strong><p>Opened ${checkedApps.length} apps and ${checkedUrls.length} URLs</p>`,
             timer: 2000,
             showConfirmButton: false,
             customClass: { popup: 'swal-compact' }

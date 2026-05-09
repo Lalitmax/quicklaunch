@@ -10,9 +10,9 @@ function Home() {
     const [toastMessage, setToastMessage] = useState("");
 
     // Open url in browser method
-    const openUrlInBrowser = async (url, browser) => {
+    const openUrl = async (url, browser) => {
         try {
-            const result = await invoke("open_url_in_browser", { url, browser });
+            const result = await invoke("open_url", { url, browser });
             console.log(result);
         } catch (error) {
             console.error(`Failed to open ${url} in ${browser}:`, error);
@@ -41,7 +41,7 @@ function Home() {
             <Navbar />
 
             <div className="flex-1 flex justify-center items-center">
-                <OpenCloseHandle openApp={openApp} openUrlInBrowser={openUrlInBrowser} />
+                <OpenCloseHandle openApp={openApp} openUrl={openUrl} />
             </div>
 
             <div className="flex justify-end items-end p-4">

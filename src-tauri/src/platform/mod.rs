@@ -4,7 +4,7 @@
 #[cfg(target_os = "windows")]
 mod windows;
 #[cfg(target_os = "windows")]
-pub use windows::{open_app, open_url_in_browser};
+pub use windows::{open_app, open_url, close_app, close_url};
 
 // macOS platform
 #[cfg(target_os = "macos")]
