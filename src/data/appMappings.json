@@ -85,6 +85,12 @@
       "keywords": ["outlook", "email", "mail", "office"]
     },
     {
+      "name": "Microsoft OneNote",
+      "path": "onenote",
+      "icon": "📓",
+      "keywords": ["onenote", "notes", "notebook", "office"]
+    },
+    {
       "name": "Microsoft Teams",
       "path": "ms-teams:",
       "icon": "💬",

@@ -42,9 +42,9 @@ function OpenCloseHandle({ openApp, openUrlInBrowser }) {
     // Handle opening all checked apps and URLs
     const handleOpenAll = async () => {
         const checkedApps = apps.filter(app => app.checked);
-        const allUrls = urls;
+        const checkedUrls = urls.filter(url => url.checked);
 
-        if (checkedApps.length === 0 && allUrls.length === 0) {
+        if (checkedApps.length === 0 && checkedUrls.length === 0) {
             await Swal.fire({
                 html: '<strong>No Apps or URLs</strong><p>Please add and select apps or URLs to launch.</p>',
                 confirmButtonColor: '#667eea',
@@ -63,8 +63,8 @@ function OpenCloseHandle({ openApp, openUrlInBrowser }) {
             }
         }
 
-        // Open all URLs
-        for (const urlData of allUrls) {
+        // Open all checked URLs
+        for (const urlData of checkedUrls) {
             try {
                 await openUrlInBrowser(urlData.url, urlData.browser);
                 await new Promise(resolve => setTimeout(resolve, 200));
@@ -74,7 +74,7 @@ function OpenCloseHandle({ openApp, openUrlInBrowser }) {
         }
 
         await Swal.fire({
-            html: `<strong>✓ Launched!</strong><p>Opened ${checkedApps.length} app(s) and ${allUrls.length} URL(s)</p>`,
+            html: `<strong>✓ Launched!</strong><p>Opened ${checkedApps.length} app(s) and ${checkedUrls.length} URL(s)</p>`,
             timer: 2000,
             showConfirmButton: false,
             customClass: { popup: 'swal-compact' }
@@ -93,7 +93,7 @@ function OpenCloseHandle({ openApp, openUrlInBrowser }) {
     return (
         <div className="flex flex-row justify-center items-center gap-6">
             <button
-                className="group relative cursor-pointer rounded-2xl px-8 py-4
+                className="group relative cursor-pointer rounded-2xl px-3 py-4
                 w-56 text-white text-lg font-semibold
                 bg-gradient-to-br from-[#4ade80] via-[#22c55e] to-[#16a34a]
                 bg-size-200 bg-pos-0 hover:bg-pos-100
@@ -106,10 +106,10 @@ function OpenCloseHandle({ openApp, openUrlInBrowser }) {
                 onClick={handleOpenAll}
                 disabled={isLoading}
             >
-                {isLoading ? 'Loading...' : 'Launch apps'}
+                {isLoading ? 'Loading...' : 'Launch Workspace'}
             </button>
             <button
-                className="group relative cursor-pointer rounded-2xl px-8 py-4
+                className="group relative cursor-pointer rounded-2xl px-3 py-4
                 w-56 text-white text-lg font-semibold
                 bg-gradient-to-br from-[#f093fb] via-[#f5576c] to-[#f093fb]
                 bg-size-200 bg-pos-0 hover:bg-pos-100
@@ -122,7 +122,7 @@ function OpenCloseHandle({ openApp, openUrlInBrowser }) {
                 onClick={handleCloseAll}
                 disabled={isLoading}
             >
-                {isLoading ? 'Loading...' : 'Close apps'}
+                {isLoading ? 'Loading...' : 'Close Workspace'}
             </button>
         </div>
     );

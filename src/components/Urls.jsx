@@ -21,13 +21,25 @@ function Urls() {
     const [toastMessage, setToastMessage] = useState("");
     const [showToast, setShowToast] = useState(false);
 
+    // Toggle URL checked state and save to storage
+    const toggleUrl = (id) => {
+        const updatedUrls = urls.map(url => url.id === id ? { ...url, checked: !url.checked } : url);
+        setUrls(updatedUrls);
+        saveUrls(updatedUrls);
+    };
+
     // Load saved URLs on component mount
     useEffect(() => {
         const loadSavedUrls = async () => {
             const savedData = await loadData();
             if (savedData && savedData.urls && savedData.urls.length > 0) {
-                setUrls(savedData.urls);
-                console.log('Loaded URLs from storage:', savedData.urls);
+                // Ensure all URLs have a checked property for backward compatibility
+                const urlsWithChecked = savedData.urls.map(url => ({
+                    ...url,
+                    checked: url.checked !== undefined ? url.checked : false
+                }));
+                setUrls(urlsWithChecked);
+                console.log('Loaded URLs from storage:', urlsWithChecked);
             } else {
                 setUrls([]);
             }
@@ -151,7 +163,8 @@ function Urls() {
             const newUrl = {
                 id: maxId + 1,
                 browser: result.value,
-                url: inputUrl
+                url: inputUrl,
+                checked: false
             };
             setUrls((prev) => {
                 const updated = [...prev, newUrl];
@@ -167,11 +180,19 @@ function Urls() {
             {/* URL List */}
             <div className="flex flex-col gap-2 flex-1 mb-2 overflow-y-auto">
                 {urls.map((url) => (
-                    <div
+                    <label
                         key={url.id}
                         className="flex items-center gap-3 px-3 py-2 rounded-md bg-white/5 hover:bg-white/10
-                                   border border-white/10 transition-all duration-150 relative"
+                                   border border-white/10 transition-all duration-150 relative cursor-pointer"
                     >
+                        {/* Checkbox */}
+                        <input
+                            type="checkbox"
+                            checked={url.checked}
+                            onChange={() => toggleUrl(url.id)}
+                            className="accent-cyan-400 w-3.5 h-3.5 cursor-pointer shrink-0"
+                        />
+
                         <GetIcon browserName={url.browser} />
                         <div className="flex flex-col flex-1 min-w-0 relative">
                             <span
@@ -199,6 +220,7 @@ function Urls() {
                         <div className="relative">
                             <button
                                 onClick={(e) => {
+                                    e.preventDefault();
                                     e.stopPropagation();
                                     toggleMenu(url.id);
                                 }}
@@ -211,7 +233,11 @@ function Urls() {
                             {openMenuId === url.id && (
                                 <div onClick={(e) => e.stopPropagation()} className="absolute -top-1 right-8 mt-1 bg-gray-800 border border-red-400/50 rounded-lg shadow-lg overflow-hidden z-10 min-w-[100px]">
                                     <button
-                                        onClick={() => handleRemoveUrl(url.id)}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            handleRemoveUrl(url.id);
+                                        }}
                                         className="cursor-pointer w-full px-4 py-2 text-left text-red-400 hover:bg-red-400/20 transition-colors text-sm whitespace-nowrap"
                                     >
                                         Remove
@@ -219,7 +245,7 @@ function Urls() {
                                 </div>
                             )}
                         </div>
-                    </div>
+                    </label>
                 ))}
             </div>
 
